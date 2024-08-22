@@ -25,19 +25,30 @@
           extend: {
             colors: {
               clifford: "#da373d",
-              primary: "rgb(139 , 195 , 74)",
+              primary: "#f8a3d0",
               secondary: "rgb(17, 17 ,17)",
               body: "rgb(248,246, 243)",
-              accent: "rgb(106,151 , 57)",
+              accent: "#f57bbc",
               body_neutral: "rgb(51,51,51)",
+              body_neutral_n: "#ffeff7",
             },
             fontFamily: {
               Poppins: "Poppins",
+            },
+            backgroundImage: {
+              bannerBg: "url(./images/sakuraMax.svg)",
+              bannerImage: "url(./images/bgImage.png)",
             },
           },
         },
       };
     </script>
+
+    <!-- Font Awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/99c758131e.js"
+      crossorigin="anonymous"
+    ></script>
 
     <style>
       .font-poppins {
@@ -48,44 +59,129 @@
   <body class="font-Poppins">
     <!-- Header Section -->
     <header>
-      <nav>
-        <div class="navbar bg-base-100 w-11/12 mx-auto">
+      <nav class="w-11/12 mx-auto">
+        <div class="navbar p-0 py-5">
           <div class="navbar-start">
+            <a href="index.html">
+              <img
+                src="./images/cropped-logo.png"
+                alt=""
+                class="w-40 md:w-64"
+              />
+            </a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-lg font-medium">
+              <li
+                class="hover:text-primary transition-colors duration-300 ease-in-out"
+              >
+                <a>Home</a>
+              </li>
+              <li
+                class="hover:text-primary transition-colors duration-300 ease-in-out"
+              >
+                <a>Everything</a>
+              </li>
+              <li
+                class="hover:text-primary transition-colors duration-300 ease-in-out"
+              >
+                <a>Sale</a>
+              </li>
+              <li
+                class="hover:text-primary transition-colors duration-300 ease-in-out"
+              >
+                <a>About</a>
+              </li>
+              <li
+                class="hover:text-primary transition-colors duration-300 ease-in-out"
+              >
+                <a>Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <div class="flex items-center gap-5 text-lg">
+              <button class="flex items-center font-semibold text-accent">
+                <span>$20.00</span>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+              <button>
+                <i class="fa-solid fa-user"></i>
+              </button>
+            </div>
+
             <div class="dropdown">
               <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
+                <i class="fa-solid fa-bars"></i>
               </div>
               <ul
                 tabindex="0"
-                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-lg font-medium right-0 gap-3"
               >
-                <li><a>Item 1</a></li>
+                <li
+                  class="hover:text-primary transition-colors duration-300 ease-in-out"
+                >
+                  <a>Home</a>
+                </li>
+                <li
+                  class="hover:text-primary transition-colors duration-300 ease-in-out"
+                >
+                  <a>Everything</a>
+                </li>
+                <li
+                  class="hover:text-primary transition-colors duration-300 ease-in-out"
+                >
+                  <a>Sale</a>
+                </li>
+                <li
+                  class="hover:text-primary transition-colors duration-300 ease-in-out"
+                >
+                  <a>About</a>
+                </li>
+                <li
+                  class="hover:text-primary transition-colors duration-300 ease-in-out"
+                >
+                  <a>Contact</a>
+                </li>
               </ul>
             </div>
-            <a class="btn btn-ghost text-xl"></a>
-            <img src="" alt="" />
-          </div>
-          <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1"></ul>
-          </div>
-          <div class="navbar-end">
-            <a class="btn">Button</a>
           </div>
         </div>
       </nav>
+
+      <!-- Banner Section -->
+      <section class="bg-bannerBg bg-no-repeat bg-right-bottom">
+        <div class="w-full h-full bg-body bg-opacity-50">
+          <div
+            class="lg:w-9/12 mx-auto lg:py-12 lg:px-0 lg:pb-24 flex sm:flex-row flex-col lg:gap-32 md:28 gap-4"
+          >
+            <div class="flex-1 flex justify-end px-8">
+              <img src="./images/bgImage.png" alt="" class="w-[480px] mt-8" />
+            </div>
+            <div class="flex-1 sm:text-left text-center px-4">
+              <h4 class="text-xl font-semibold lg:my-9 mt-2">
+                Best Skin-Care Products
+              </h4>
+              <h1 class="lg:text-8xl text-4xl font-extrabold my-5">
+                Treat To Your Skin!
+              </h1>
+              <p class="lg:text-lg text-md lg:my-5 text-gray-500">
+                Taking care of your skin is essential for maintaining overall
+                health and well-being. It protects your body from harmful
+                environmental factors, prevents premature aging, and keeps your
+                complexion looking fresh and radiant.
+              </p>
+              <div class="flex sm:justify-start justify-center pb-6">
+                <button
+                  class="flex items-center gap-2 rounded-md bg-accent mt-6 px-10 py-4 hover:bg-primary"
+                >
+                  <span>Shop Now</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
   </body>
 </html>
